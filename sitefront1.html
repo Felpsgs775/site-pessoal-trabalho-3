@@ -3,82 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu site</title>
-    
+    <title>Felipe &mdash; Estudante de TSI &amp; Analista de Suporte</title>
+    <meta name="description" content="Portfólio pessoal de Felipe, estudante de Tecnologia em Sistemas para Internet na UTFPR e Analista de Suporte e Atendimento na Inside Sistemas.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="apresentacao">
-        <img src="imagens/perfil.jpg" alt="imagem de apresentação" id="perfil">
-        <h1>Olá, me chamo Felipe</h1>
-        <h2>Estudante de <abbr title="Tecnologia em Sistemas Para Internet">TSI</abbr> na <abbr title="Universidade Tecnológica Federal do Paraná">UTFPR</abbr></h2>
-        <picture id="instagram">
-            <img src="imagens/Instagram_icon.png" alt="Logo do instagram">
-            <span>Clique <a href="https://www.instagram.com/felps_gs_" target="_blank">aqui</a> para ver meu instagram</span>
-        </picture>
-    
-    </div>
-    <div id="sonho">
-        <h2>Sobre minha vida</h2>
-        <h3>Onde trabalho?</h3>
-        <picture>
-            <img src="imagens/inside_sistemas_logo.jpeg" alt="Logo da Inside Sistemas">
-            <figcaption>Trabalho na Inside Sistemas como Trainee Help Desk</figcaption>
-        </picture>
-        <p>Meu sonho é ter uma carreira sólida e um dia ser desenvolvedor de uma grande empresa de tecnologia, além do sonho profissional, desejo contruir uma boa família com valores e princípios cristãos.</p>
-    </div>
-    <div id="descricao">
-        <h3>O que eu faço no meu tempo livre?</h3>
-        <p>Até mesmo no meu tempo livre me dedico á obter conehcimentos, estudando minha fé(catolicismo), leituras de livros que me ajudam a ser uma pessoal melhor (desenvolvimento pessoal), além disso, gosto de sair com meus pais e meu irmão aos finais de semana ou com meus amigos para me divertir.</p>
-    </div>
 
-    <div id="canaisfavoritos">
-        <h3>Alguns canais do Youtube que gosto de assistir</h3>
-        <ul>
-            <li><a href="https://www.youtube.com/@mbcnate" target="_blank">Nathan MBC</a></li>
-            <li><a href="https://www.youtube.com/@yudiganeko" target="_blank">Yudi Ganeko</a></li>
-            <li><a href="https://www.youtube.com/@catholic_Nerd" target="_blank">Catholic Nerd</a></li>
-            <li><a href="https://www.youtube.com/@sobrevivaaobrasil" target="_blank">Sobreviva ao Brasil</a></li>
-            <li><a href="https://www.youtube.com/@PKBJMJ" target="_blank">PKB</a></li>
-        </ul>
-    </div>
-    <br>
-    <h3 id="titulotabela">Algumas tecnologias que eu conheço</h3>
-    <table id="tecnologiaseusos">
-        <tr>
-            <th>Tecnologia</th>
-            <th>Uso</th>
-        </tr>
-        <tr>
-            <td>HTML & CSS</td>
-            <td>Desenvolvimento de páginas web</td>
-        </tr>
-        <tr>
-            <td>JavaScript</td>
-            <td>Interatividade em sites</td>
-        </tr>
-        <tr>
-            <td>Python</td>
-            <td>Automação, análise de dados e backend</td>
-        </tr>
-        <tr>
-            <td>C</td>
-            <td>Programação de sistemas e baixo nível</td>
-        </tr>
-        <tr>
-            <td>SQL</td>
-            <td>Gerenciamento de bancos de dados</td>
-        </tr>
-    </table>
-    <br>
-    <h3>E é assim que se escreve "olá mundo" em linguagem C ⏬⏬⏬</h3>
-    <code>
-        #include &lt;stdio.h&gt;
-        <br>
-            int main() <br>
-            { <br>
-                printf("olá mundo"); <br>
-                return 0; <br>
-            }
-    </code>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg pf-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#top">Felipe<span>.dev</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pfNav" aria-controls="pfNav" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="pfNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sonho">Sobre mim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#canaisfavoritos">Interesses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/felps_gs_" target="_blank">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="top"></div>
+
+    <!-- ===== APRESENTAÇÃO / HERO ===== -->
+    <header id="apresentacao" class="pf-hero">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-4 text-center order-lg-2">
+                    <div class="pf-avatar-ring">
+                        <img src="imagens/perfil.jpg" alt="Foto de perfil de Felipe" id="perfil">
+                    </div>
+                </div>
+                <div class="col-lg-8 order-lg-1 text-center text-lg-start">
+                    <p class="pf-eyebrow">Tecnologia da Informação</p>
+                    <h1>Olá, me chamo Felipe</h1>
+                    <h2>Estudante de <abbr title="Tecnologia em Sistemas Para Internet">TSI</abbr> na <abbr title="Universidade Tecnológica Federal do Paraná">UTFPR</abbr></h2>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="https://www.instagram.com/felps_gs_" target="_blank" class="pf-btn-primary">
+                            <i class="bi bi-instagram" aria-hidden="true"></i> Meu Instagram
+                        </a>
+                        <a href="#tecnologias" class="pf-btn-outline">
+                            <i class="bi bi-code-slash" aria-hidden="true"></i> Ver tecnologias
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SOBRE / ONDE TRABALHO ===== -->
+    <section id="sonho" class="pf-section">
+        <div class="container">
+            <span class="pf-kicker">Sobre minha vida</span>
+            <h2 class="pf-section-title"><i class="bi bi-briefcase" aria-hidden="true"></i>Onde trabalho?</h2>
+            <p class="pf-section-sub">Um pouco da minha rotina profissional e dos planos que carrego para o futuro.</p>
+
+            <div class="pf-card">
+                <figure class="pf-work-card m-0">
+                    <img src="imagens/inside_sistemas_logo.jpeg" alt="Logo da Inside Sistemas">
+                    <figcaption>Trabalho na Inside Sistemas como Analista de Suporte e Atendimento.</figcaption>
+                </figure>
+                <p class="pf-dream-text">Meu sonho é ter uma carreira sólida e, um dia, ser desenvolvedor em uma grande empresa de tecnologia. Além do sonho profissional, desejo construir uma boa família com valores e princípios cristãos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEMPO LIVRE ===== -->
+    <section id="descricao" class="pf-section pt-0">
+        <div class="container">
+            <div class="pf-card">
+                <div class="pf-freetime-icon"><i class="bi bi-cup-hot" aria-hidden="true"></i></div>
+                <h3 class="mb-3">O que eu faço no meu tempo livre?</h3>
+                <p class="mb-0" style="color: var(--muted);">Até mesmo no meu tempo livre me dedico a obter conhecimento: estudo minha fé (catolicismo) e leio livros que me ajudam a ser uma pessoa melhor (desenvolvimento pessoal). Além disso, gosto de sair com meus pais e meu irmão aos finais de semana, ou com meus amigos, para me divertir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CANAIS FAVORITOS ===== -->
+    <section id="canaisfavoritos" class="pf-section pt-0">
+        <div class="container">
+            <span class="pf-kicker">Interesses</span>
+            <h2 class="pf-section-title"><i class="bi bi-youtube" aria-hidden="true"></i>Canais do Youtube que gosto de assistir</h2>
+            <p class="pf-section-sub">Alguns criadores de conteúdo que fazem parte da minha rotina.</p>
+
+            <ul class="pf-channel-list">
+                <li><a class="pf-channel-link" href="https://www.youtube.com/@mbcnate" target="_blank"><i class="bi bi-youtube" aria-hidden="true"></i>Nathan MBC</a></li>
+                <li><a class="pf-channel-link" href="https://www.youtube.com/@yudiganeko" target="_blank"><i class="bi bi-youtube" aria-hidden="true"></i>Yudi Ganeko</a></li>
+                <li><a class="pf-channel-link" href="https://www.youtube.com/@catholic_Nerd" target="_blank"><i class="bi bi-youtube" aria-hidden="true"></i>Catholic Nerd</a></li>
+                <li><a class="pf-channel-link" href="https://www.youtube.com/@sobrevivaaobrasil" target="_blank"><i class="bi bi-youtube" aria-hidden="true"></i>Sobreviva ao Brasil</a></li>
+                <li><a class="pf-channel-link" href="https://www.youtube.com/@PKBJMJ" target="_blank"><i class="bi bi-youtube" aria-hidden="true"></i>PKB</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== TECNOLOGIAS ===== -->
+    <section id="tecnologias" class="pf-section pt-0">
+        <div class="container">
+            <span class="pf-kicker">Stack</span>
+            <h2 class="pf-section-title" id="titulotabela"><i class="bi bi-cpu" aria-hidden="true"></i>Algumas tecnologias que eu conheço</h2>
+            <p class="pf-section-sub">Ferramentas e linguagens que uso para desenvolver, automatizar e organizar dados.</p>
+
+            <div class="row g-4" id="tecnologiaseusos">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="pf-tech-card">
+                        <div class="pf-tech-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></div>
+                        <h4>HTML &amp; CSS</h4>
+                        <p>Desenvolvimento de páginas web.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="pf-tech-card">
+                        <div class="pf-tech-icon"><i class="bi bi-braces" aria-hidden="true"></i></div>
+                        <h4>JavaScript</h4>
+                        <p>Interatividade em sites.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="pf-tech-card">
+                        <div class="pf-tech-icon"><i class="bi bi-terminal" aria-hidden="true"></i></div>
+                        <h4>Python</h4>
+                        <p>Automação, análise de dados e backend.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="pf-tech-card">
+                        <div class="pf-tech-icon"><i class="bi bi-cpu" aria-hidden="true"></i></div>
+                        <h4>C</h4>
+                        <p>Programação de sistemas e baixo nível.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="pf-tech-card">
+                        <div class="pf-tech-icon"><i class="bi bi-database" aria-hidden="true"></i></div>
+                        <h4>SQL</h4>
+                        <p>Gerenciamento de bancos de dados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CÓDIGO ===== -->
+    <section class="pf-section pt-0">
+        <div class="container">
+            <h3 class="text-center mb-4">E é assim que se escreve "olá mundo" em linguagem C</h3>
+            <div class="pf-code-window">
+                <div class="pf-code-titlebar">
+                    <span></span><span></span><span></span>
+                    <small>ola_mundo.c</small>
+                </div>
+                <pre><code><span class="tok-pre">#include</span> <span class="tok-str">&lt;stdio.h&gt;</span>
+
+<span class="tok-key">int</span> <span class="tok-fn">main</span>()
+{
+    <span class="tok-fn">printf</span>(<span class="tok-str">"olá mundo"</span>);
+    <span class="tok-key">return</span> 0;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="pf-footer">
+        <div class="container">
+            Felipe &middot; <a href="https://www.instagram.com/felps_gs_" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
